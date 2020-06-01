@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <style>
+            .grid{
+                display:grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-gap: 20px;
+            }
+            .filter{
+                display: block;
+                position: sticky;
+                top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+    <nav class="navbar navbar-dark bg-primary">
+        <a href="" class="navbar-brand mb-0 h1">Commerce</a>
+    </nav>
+    <div class="mt-5"></div>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        {% endblock %}
+    </body>
+</html>
